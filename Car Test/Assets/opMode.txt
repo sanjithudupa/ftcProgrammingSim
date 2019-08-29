@@ -1,0 +1,28 @@
+package org.firstinspires.ftc.teamcode;
+
+@TeleOp(name="My OpMode", group="opModes")
+public class Autonomous extends LinearOpMode {
+
+//DO NOT EDIT ANYTHING ABOVE THIS LINE
+@Override
+public void runOpMode(){
+
+	//write your initialization code here
+
+
+
+
+    
+	waitForStart();
+    
+	/write your run code here
+
+
+
+
+
+
+
+
+
+}
