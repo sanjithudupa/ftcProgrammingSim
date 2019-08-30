@@ -1,28 +1,36 @@
-package org.firstinspires.ftc.teamcode;
+﻿package org.firstinspires.ftc.teamcode;
 
-@TeleOp(name="My OpMode", group="opModes")
-public class Autonomous extends LinearOpMode {
+@Autonomous(name="Linear Op Mode", group="samples")
+public class LinearOpModeExample extends LinearOpMode {
 
-//DO NOT EDIT ANYTHING ABOVE THIS LINE
+
+//create object of hardware class
+RobotHardware robot = new RobotHardware();
+
+
+
 @Override
 public void runOpMode(){
 
+
+
 	//write your initialization code here
 
-
+    robot.init();
 
 
     
 	waitForStart();
     
-	/write your run code here
+	//write your run code here
+
+       
 
 
 
 
+}
 
-
-
-
+public void driveForward(){
 
 }

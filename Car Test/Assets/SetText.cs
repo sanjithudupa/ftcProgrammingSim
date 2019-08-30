@@ -14,6 +14,7 @@ public class SetText : MonoBehaviour
     public string pathB = "Assets/AutonomousBaseOG.txt";
     public string pathH = "Assets/HardwareOG.txt";
     public string pathO = "Assets/opModeOG.txt";
+    public Text theText;
     // Start is called before the first frame update
 
     [MenuItem("Tools/Read file")]
@@ -35,7 +36,8 @@ public class SetText : MonoBehaviour
         File.WriteAllText(path, reader4.ReadToEnd());
 
 
-        path = "Assets/AutonomousBase.txt";
+        path = "Assets/opMode.txt";
+        
 
         //Read the text from directly from the test.txt file
         StreamReader reader = new StreamReader(path);
@@ -62,12 +64,14 @@ public class SetText : MonoBehaviour
             TextAsset asset = (UnityEngine.TextAsset)Resources.Load(input.text);
 
 
-            path = "Assets/AutonomousBase.txt";
+            path = "Assets/opMode.txt";
             //Read the text from directly from the test.txt file
             StreamReader reader = new StreamReader(path);
+            
 
             input.text = reader.ReadToEnd();
             Debug.Log(reader.ReadToEnd());
+
 
             
 
@@ -88,8 +92,11 @@ public class SetText : MonoBehaviour
             //Read the text from directly from the test.txt file
             StreamReader reader = new StreamReader(path);
 
+            
             input.text = reader.ReadToEnd();
             Debug.Log(reader.ReadToEnd());
+
+
 
             
 
@@ -110,6 +117,8 @@ public class SetText : MonoBehaviour
             //Read the text from directly from the test.txt file
             StreamReader reader = new StreamReader(path);
 
+          
+
             input.text = reader.ReadToEnd();
             Debug.Log(reader.ReadToEnd());
 
@@ -120,7 +129,7 @@ public class SetText : MonoBehaviour
      }
    public void savePressed()
     {
-
+        
         if (drop.value == 0)
         {
            

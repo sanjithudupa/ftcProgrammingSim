@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode;
+﻿package org.firstinspires.ftc.teamcode;
 
 @TeleOp(name="My OpMode", group="opModes")
 public class Autonomous extends LinearOpMode {
@@ -17,10 +17,7 @@ public void runOpMode(){
     
 	/write your run code here
 
-
-
-
-
+       
 
 
 

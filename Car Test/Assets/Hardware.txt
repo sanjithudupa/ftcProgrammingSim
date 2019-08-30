@@ -7,17 +7,59 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
 
 public class RobotHardware {
-	
-	//define motors here
+    
 
-	
+    /* Public OpMode members. */
+    public DcMotor  leftFront  = null;
+    public DcMotor  rightFront = null;
+    public DcMotor  leftRear  = null;
+    public DcMotor  rightRear = null;
+    
+    /* local OpMode members. */
+    HardwareMap hwMap           =  null;
+    private ElapsedTime period  = new ElapsedTime();
 
-	//define directions here
+    /* Constructor */
+    public HardwarePushbot(){
 
-	
-	//create init function here
-	
-	
+    }
+
+    /* Initialize standard Hardware interfaces */
+    public void init(HardwareMap ahwMap) {
+        // Save reference to Hardware map
+        hwMap = ahwMap;
+
+        // Define and Initialize Motors
+        leftFront = hwMap.get(DcMotor.class, "lf");
+        rightFront = hwMap.get(DcMotor.class, "rf");
+        leftRear = hwMap.get(DcMotor.class, "lr");
+        rightRear = hwMap.get(DcMotor.class, "rr");
+
+
+
+        leftFront.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
+        rightFront.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
+        leftRear.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
+        rightRear.setDirection(DcMotor.Direction.FORWARD);
+
+        // Set all motors to zero power
+        leftFront.setPower(0);
+        rightFront.setPower(0);
+        leftRear.setPower(0);
+        rightRear.setPower(0);
+
+
+        // Set all motors to run without encoders.
+        // May want to use RUN_USING_ENCODERS if encoders are installed.
+        leftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        rightFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        leftRear.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        rightRear.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
+        }
+
+    
+    
 
 
 
