@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 using UnityEngine.UI;
-
+ 
 public class SetText : MonoBehaviour
 {
 

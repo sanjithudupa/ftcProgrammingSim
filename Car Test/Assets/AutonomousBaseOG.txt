@@ -6,18 +6,59 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
 
-public class AutonomousBase {
+public class AutonomousBase extends LinearOpMode{
+
+public RobotHardware robot = new RobotHardware();
 	
 	//create drive forward method here
+    
+   public void driveForward(time,power){
+       robot.leftMotor.setPower(power);
+       robot.rightMotor.setPower(power);
+       sleep(time);
+       robot.leftMotor.setPower(0);
+       robot.rightMotor.setPower(0);
+   
+   }
+
 
 
 	//create drive backwards method here
 
+   public void driveBackward(time,power){
+       robot.leftMotor.setPower(-power);
+       robot.rightMotor.setPower(-power);
+       sleep(time);
+       robot.leftMotor.setPower(0);
+       robot.rightMotor.setPower(0);
+   
+   }
+
 	
 	//create turn left method here
 
+   public void turnLeft(time,power){
+       robot.leftMotor.setPower(power);
+       robot.rightMotor.setPower(-power);
+       sleep(time);
+       robot.leftMotor.setPower(0);
+       robot.rightMotor.setPower(0);
+   
+   }
+
+
+
 
 	//create turn right method here
+
+   public void turnLeft(time,power){
+       robot.leftMotor.setPower(-power);
+       robot.rightMotor.setPower(power);
+       sleep(time);
+       robot.leftMotor.setPower(0);
+       robot.rightMotor.setPower(0);
+   
+   }
 	
 	
 	
