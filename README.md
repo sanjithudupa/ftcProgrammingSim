@@ -1,7 +1,7 @@
 # First Tech Challenge Programming Simulator
 This is a simulator for FTC Students to learn about basic programming logic.
 
-We are currently in Beta development and this project is not yet complete. It is a very basic look at programming.
+*Currently in Beta development and this project is not yet complete. It is a very basic look at programming and is very helpful for people who are new to or learning programming of any kind*
 
 
 ## Functions:
