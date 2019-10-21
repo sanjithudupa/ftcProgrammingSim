@@ -13,13 +13,17 @@ public class SetText : MonoBehaviour
     public string path;
     public string pathB = "Assets/AutonomousBaseOG.txt";
     public string pathH = "Assets/HardwareOG.txt";
-    public string pathO = "Assets/opModeOG.txt";
+    public string pathO = "Assets/opMode.txt";
     public Text theText;
+
+	public string programText;
+
     // Start is called before the first frame update
 
     [MenuItem("Tools/Read file")]
     void Start()
     {
+
         StreamReader reader2 = new StreamReader(pathB);
         path = "Assets/AutonomousBase.txt";
         File.Delete(path);
@@ -129,40 +133,17 @@ public class SetText : MonoBehaviour
      }
    public void savePressed()
     {
-        
-        if (drop.value == 0)
-        {
-           
-
-            path = "Assets/AutonomousBase.txt";
-
-            File.Delete(path);
-            File.WriteAllText(path,input.text);
-
-
-        }
-        else if (drop.value == 1)
-        {
-            
-
-            path = "Assets/Hardware.txt";
-            File.Delete(path);
-            File.WriteAllText(path, input.text);
-
-
-        }
-        else
-        {
-            
-            path = "Assets/opMode.txt";
-            File.Delete(path);
-            File.WriteAllText(path, input.text);
+		Debug.Log("saved");
+		path = "Assets/opMode.txt";
+		File.Delete(path);
+		File.WriteAllText(path, input.text);
+		//StreamReader reader = new StreamReader(path);
+		//PlayerPrefs.SetString("Program",reader.ReadToEnd());
+		//programText = PlayerPrefs.GetString("Program");
 
 
 
-        }
-
-    }
+	}
 
     
 }

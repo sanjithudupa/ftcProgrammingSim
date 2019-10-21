@@ -39,7 +39,7 @@ public class HandleText : MonoBehaviour
     }
      void Start()
     {
-        ReadString();
+        //ReadString();
     }
 
 

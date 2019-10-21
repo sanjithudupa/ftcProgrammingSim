@@ -1,10 +1,9 @@
 package org.firstinspires.ftc.teamcode;
 
 @TeleOp(name="My OpMode", group="opModes")
-public class Autonomous extends AutonomousBase {
+public class Autonomous extends LinearOpMode {
 
 
-//DO NOT EDIT ANYTHING ABOVE THIS LINE
 @Override
 public void runOpMode(){
 
@@ -13,14 +12,13 @@ public void runOpMode(){
     
 	//write below(don't delete)
    
-    driveBackward(2,1);
+	turnLeft(3,1);
     
+
+   
     //write above(don't delete)
     
     
-
-
-
 
 }
 

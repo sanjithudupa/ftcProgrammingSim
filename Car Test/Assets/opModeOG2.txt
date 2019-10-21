@@ -13,8 +13,10 @@ public void runOpMode(){
     
 	//write below(don't delete)
    
-    driveBackward(2,1);
-    
+
+    turnRight(2.3,1);
+
+   
     //write above(don't delete)
     
     
