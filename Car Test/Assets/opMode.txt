@@ -12,7 +12,7 @@ public void runOpMode(){
     
 	//write below(don't delete)
    
-	turnLeft(3,1);
+	driveBackward(2,1);
     
 
    

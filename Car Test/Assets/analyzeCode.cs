@@ -120,12 +120,12 @@ public class analyzeCode : MonoBehaviour
 		lf.targetVelocity = 0;
 		lr.targetVelocity = 0;
 
-        robot.transform.position = new Vector3(1,7,0); 
+        //robot.transform.position = new Vector3(1,7,0); 
 
-		//SceneManager.LoadScene(0);
-		
+        SceneManager.LoadScene(1);
 
-	}
+
+    }
 
     
 
@@ -237,8 +237,8 @@ public class analyzeCode : MonoBehaviour
 
         rf.targetVelocity = -500 * tp[1];
         rr.targetVelocity = -500 * tp[1];
-        lf.targetVelocity = -700 * tp[1];
-        lr.targetVelocity = -700 * tp[1];
+        lf.targetVelocity = -550 * tp[1];
+        lr.targetVelocity = -550 * tp[1];
 
         rf1.motor = rf;
         rr1.motor = rr;
@@ -298,8 +298,8 @@ public class analyzeCode : MonoBehaviour
 
         rf.targetVelocity = 500 * tp[1];
         rr.targetVelocity = 500 * tp[1];
-        lf.targetVelocity = -500 * tp[1];
-        lr.targetVelocity = -700 * tp[1];
+        lf.targetVelocity = -650 * tp[1];
+        lr.targetVelocity = -650 * tp[1];
 
         rf1.motor = rf;
         rr1.motor = rr;
@@ -423,10 +423,10 @@ public class analyzeCode : MonoBehaviour
 		lr.force = 100;
 
 
-		rf.targetVelocity = 500 * dp[1];
-		rr.targetVelocity = 500 * dp[1];
-		lf.targetVelocity = -500 * dp[1];
-		lr.targetVelocity = -700 * dp[1];
+		rf.targetVelocity = -500 * dp[1];
+		rr.targetVelocity = 1000 * dp[1];
+		lf.targetVelocity = 1000 * dp[1];
+		lr.targetVelocity = -500 * dp[1];
 
 		rf1.motor = rf;
 		rr1.motor = rr;
